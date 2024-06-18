@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notice</title>
+    <title>create</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,14 +27,20 @@
                     <td>{$row['date']}</td>
                 </tr>";
             }
-            echo "                
-            <tr>
-                <td colspan='4'><a href='create.php'><button>CREATE</button></a></td>
-            </tr>";
+            echo "
+                <form action='createProcess.php' method='post'>
+                    <tr>
+                        <td>아이디</td>
+                        <td><input type='text' placeholder='Name'></td>
+                        <td><input type='text' placeholder='Title'></td>
+                        <td>날짜</td>
+                        <td><input type='submit' value='submit'></td>
+                    </tr>
+                </form>";
         ?>
     </table>
 
 
     <script src="index.js"></script>
 </body>
-</html>
+</html>`
