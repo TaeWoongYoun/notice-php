@@ -1,3 +1,4 @@
+<?php $conn = mysqli_connect('localhost', 'root', '', 'notice')?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -14,18 +15,19 @@
             <th>Title</th>
             <th>Date</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>xodnd</td>
-            <td>변태 원필립의 생활</td>
-            <td>2024-06-17</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>vlfflq</td>
-            <td>윤도연 스토킹하기</td>
-            <td>2024-06-18</td>
-        </tr>
+        <?php
+            $sql = "SELECT * FROM notice";
+            $result = mysqli_query($conn, $sql);
+            while($row = mysqli_fetch_array($result)){
+                echo "
+                <tr>
+                    <td>{$row['id']}</td>
+                    <td>{$row['name']}</td>
+                    <td>{$row['title']}</td>
+                    <td>{$row['date']}</td>
+                </tr>";
+            }
+        ?>
     </table>
 
     <script src="index.js"></script>
