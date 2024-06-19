@@ -27,17 +27,16 @@
                     <td>{$row['date']}</td>
                 </tr>";
             }
-            echo "
-                <form action='createProcess.php' method='post'>
-                    <tr>
-                        <td>아이디</td>
-                        <td><input type='text' name='name' placeholder='Name'></td>
-                        <td><input type='text' name='title' placeholder='Title'></td>
-                        <td>날짜</td>
-                        <td><input type='submit' value='submit'></td>
-                    </tr>
-                </form>";
         ?>
+        <form action='createProcess.php' method='post'>
+            <tr>
+                <td>아이디</td>
+                <td><input type='text' name='name' placeholder='Name'></td>
+                <td><input type='text' name='title' placeholder='Title'></td>
+                <td>날짜</td>
+                <td><input type='submit' value='submit'></td>
+            </tr>
+        </form>
     </table>
 
 
