@@ -25,16 +25,14 @@
                     <td>{$row['name']}</td>
                     <td>{$row['title']}</td>
                     <td>{$row['date']}</td>
+                    <td><a href='update.php?id={$row['id']}'><button>UPDATE</butoon></a></td>
                 </tr>";
             }
-            echo "                
-            <tr>
-                <td colspan='4'><a href='create.php'><button>CREATE</button></a></td>
-            </tr>";
         ?>
+        <tr>
+            <td colspan='5'><a href='create.php'><button>CREATE</button></a></td>
+        </tr>
     </table>
-
-
     <script src="index.js"></script>
 </body>
 </html>
