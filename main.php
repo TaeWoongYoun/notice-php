@@ -26,11 +26,13 @@
                     <td>{$row['title']}</td>
                     <td>{$row['date']}</td>
                     <td><a href='update.php?id={$row['id']}'><button>UPDATE</butoon></a></td>
+                    <input type='hidden' name='id' value='{$row['id']}'>
+                    <td><a href='delete.php?id={$row['id']}'><button>DELETE</button></a></td>
                 </tr>";
             }
         ?>
         <tr>
-            <td colspan='5'><a href='create.php'><button>CREATE</button></a></td>
+            <td colspan='6'><a href='create.php'><button>CREATE</button></a></td>
         </tr>
     </table>
     <script src="index.js"></script>
