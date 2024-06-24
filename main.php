@@ -25,9 +25,11 @@
                     <td>{$row['name']}</td>
                     <td>{$row['title']}</td>
                     <td>{$row['date']}</td>
-                    <td><a href='update.php?id={$row['id']}'><button>UPDATE</butoon></a></td>
-                    <input type='hidden' name='id' value='{$row['id']}'>
-                    <td><a href='delete.php?id={$row['id']}'><button>DELETE</button></a></td>
+                    <td><a href='update.php?id={$row['id']}'><button>UPDATE</butoon></a></td>        
+                    <form action='delete.php' method='post'>
+                        <input type='hidden' name='id' value='{$row['id']}'>
+                        <td><input type='submit' value='DELETE'></td>
+                    </form>        
                 </tr>";
             }
         ?>
