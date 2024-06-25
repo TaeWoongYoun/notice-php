@@ -24,7 +24,7 @@
                     <td>{$row['id']}</td>
                     <td>{$row['name']}</td>
                     <td>{$row['title']}</td>
-                    <td>{$row['date']}</td>
+                    <td class='date'>{$row['date']}</td>
                     <td><a href='update.php?id={$row['id']}'><button>UPDATE</butoon></a></td>        
                     <form action='delete.php' method='post'>
                         <input type='hidden' name='id' value='{$row['id']}'>

@@ -30,13 +30,12 @@ th,td{
     vertical-align: middle;   
 }
 
-th{
-    background-color: lightblue;
+.date{
+    width: 200px;
 }
 
-td{
-    width: 200px;
-    padding: 10px;
+th{
+    background-color: lightblue;
 }
 
 input[type='text']{
