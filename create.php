@@ -13,7 +13,7 @@
             <th>ID</th>
             <th>Name</th>
             <th>Title</th>
-            <th>Date</th>
+            <th class="date">Date</th>
         </tr>
         <?php
             $sql = "SELECT * FROM notice";
