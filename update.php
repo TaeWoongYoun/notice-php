@@ -1,10 +1,11 @@
-<?php $conn = mysqli_connect('localhost', 'root', '', 'notice')?>
+<!-- update.php -->
+<?php $conn = mysqli_connect('localhost', 'root', '', 'phpProject')?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notice</title>
+    <title>update</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +14,8 @@
             <th>ID</th>
             <th>Name</th>
             <th>Title</th>
-            <th class="date">Date</th>
+            <th>Date</th>
+            <th>Update</th>
         </tr>
         <?php
             $id = isset($_GET['id']) ? $_GET['id'] : null;
@@ -31,11 +33,10 @@
                 <td><?= $row['id']?></td>
                 <td><input type="text" name="name" value="<?= $row['name'] ?>"></td>
                 <td><input type="text" name="title" value="<?= $row['title'] ?>"></td>
-                <td><p>자동완성</p></td>
-                <td><input type="submit" value="submit"></td>
+                <td>자동완성</td>
+                <td><input type="submit" value="UPDATE"></td>
             </form>
         </tr>
     </table>
-    <script src="index.js"></script>
 </body>
 </html>
