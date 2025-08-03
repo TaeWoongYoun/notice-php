@@ -1,4 +1,4 @@
-<?php $conn = mysqli_connect('localhost', 'root', '', 'notice')?>
+<?php $conn = mysqli_connect('localhost', 'root', '', 'phpProject')?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -38,8 +38,5 @@
             </tr>
         </form>
     </table>
-
-
-    <script src="index.js"></script>
 </body>
-</html>`
+</html>
