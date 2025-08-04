@@ -1,4 +1,5 @@
-<?php $conn = mysqli_connect('localhost', 'root', '', 'notice')?>
+<!-- delete.php -->
+<?php $conn = mysqli_connect('localhost', 'root', '', 'phpProject')?>
 <?php
     $id = mysqli_real_escape_string($conn, $_POST['id']);
     $sql = "DELETE FROM notice WHERE id = $id";
@@ -7,5 +8,5 @@
 
 <script>
     alert('삭제 성공')
-    location.href = 'main.php'
+    location.href = 'index.php'
 </script>

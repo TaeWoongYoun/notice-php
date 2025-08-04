@@ -16,7 +16,8 @@
             <th>Name</th>
             <th>Title</th>
             <th>Date</th>
-            <th>Update</th>  <!-- 새로운 컬럼 추가 -->
+            <th>Update</th>
+            <th>Delete</th>  <!-- 새로운 컬럼 추가 -->
         </tr>
         <?php
             $sql = "SELECT * FROM notice";
@@ -27,21 +28,18 @@
                 echo "<td>{$row['name']}</td>";
                 echo "<td>{$row['title']}</td>";
                 echo "<td>{$row['date']}</td>";
-                echo "<td><a href='update.php?id={$row['id']}'><button>UPDATE</button></a></td>";  //UPDATE 버튼 추가
+                echo "<td><a href='update.php?id={$row['id']}'><button>UPDATE</button></a></td>";
+                echo "<form action='delete.php' method='post'>
+                        <input type='hidden' name='id' value='{$row['id']}'>
+                        <td><input type='submit' value='DELETE'></td>
+                    </form>";
                 echo "</tr>";
             }
         ?>
         <tr>
-            <td colspan='5'><a href='create.php'><button>CREATE</button></a></td>  <!-- colspan 값 변경 -->
+            <td colspan='6'><a href='create.php'><button>CREATE</button></a></td>  <!-- colspan 값 변경 -->
         </tr>
     </table>
 </body>
 </html>
-    <!-- 
-
-        
-    <td><a href='update.php?id={$row['id']}'><button>UPDATE</butoon></a></td>
-    <form action='delete.php' method='post'>
-        <input type='hidden' name='id' value='{$row['id']}'>
-        <td><input type='submit' value='DELETE'></td>
-    </form>   -->
+    
